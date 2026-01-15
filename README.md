@@ -13,7 +13,7 @@
 [cite_start]实验环境基于 EVE-NG 搭建，包含攻击者、防火墙网关及目标服务器 [cite: 10]。
 
 ![网络拓扑图](images/topology.png) 
-*(注：请将你的拓扑截图命名为 topology.png 放入 images 文件夹)*
+
 
 | 节点名称 | 角色 | IP 地址 |
 | :--- | :--- | :--- |
@@ -62,13 +62,12 @@
 
 ### 防护效果验证
 
-1. 
-**日志确认**：查看 `/var/log/apache2/modsec_audit.log`，确认 WAF 已命中规则并执行 `Intercepted` 操作 。
+1. **日志确认**：查看 `/var/log/apache2/modsec_audit.log`，确认 WAF 已命中规则并执行 `Intercepted` 操作 。
+![WAF日志](images/waf_log.png) 
 
 
-2. 
-**流量分析**：Wireshark 抓包显示服务器直接返回了 **403 Forbidden**，证明恶意请求被成功阻断 。
-
+2. **流量分析**：Wireshark 抓包显示服务器直接返回了 **403 Forbidden**，证明恶意请求被成功阻断 。
+![抓包分析](images/wireshark.png) 
 
 
 ---
