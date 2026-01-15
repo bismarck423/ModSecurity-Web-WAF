@@ -1,6 +1,5 @@
 # -ModSecurity-Web-WAF-
 在 Ubuntu 18.04 上部署 Apache + ModSecurity，并利用 OWASP CRS 防御 SQL 注入攻击 。
-```markdown
 # 实验报告：基于 ModSecurity (WAF) 的 Web 攻击防护实战
 
 ## 1. 实验目标 🎯
@@ -9,7 +8,6 @@
 * [cite_start]使用 OWASP 核心规则集 (CRS) 拦截 SQL 注入等常见 Web 攻击 [cite: 5, 29]。
 * [cite_start]通过 Wireshark 抓包分析攻击请求与拦截响应 [cite: 6, 31]。
 
----
 
 ## 2. 网络拓扑 🌐
 [cite_start]实验环境基于 EVE-NG 搭建，包含攻击者、防火墙网关及目标服务器 [cite: 10]。
@@ -49,8 +47,6 @@
 [cite_start]sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf [cite: 25]
 
 ```
-
----
 
 ## 4. 攻击测试与结果分析 ⚖️
 
